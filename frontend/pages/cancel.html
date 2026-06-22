@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cancel Reservation</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-brand">MeetingRoom</div>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="create.html">Create</a>
+      <a href="cancel.html">Cancel</a>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="container">
+      <h1>Cancel Reservation</h1>
+      <p>Search by name to find and cancel your booking</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="form-card">
+
+      <div class="form-group">
+        <label for="cancel-name">Your Name</label>
+        <input type="text" id="cancel-name" placeholder="Enter the name used to book">
+      </div>
+
+      <button id="search-btn" class="btn full-width">Search Reservations</button>
+
+      <div class="results" id="reservation-results"></div>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>© 2026 Meeting Room Reservation System. All rights reserved.</p>
+    <p>Developed by Okafor Ifunanya and Ekwem Chidumaga</p>
+  </footer>
+
+  <script src="../app.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Room Calendar</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-brand">MeetingRoom</div>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="create.html">Create</a>
+      <a href="cancel.html">Cancel</a>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="container">
+      <h1>Room Calendar</h1>
+      <p>View all reservations for the selected date</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="controls">
+      <label for="date-picker">Select Date</label>
+      <input type="date" id="date-picker">
+      <button id="view-btn" class="btn">View</button>
+    </div>
+
+    <div class="calendar-wrap" id="calendar-grid">
+      <p class="placeholder">Select a date to view reservations.</p>
+    </div>
+
+    <a href="create.html" class="btn" style="margin-top:1.5rem; display:inline-block">
+      + New Reservation
+    </a>
+  </div>
+
+  <footer class="footer">
+    <p>© 2026 Meeting Room Reservation System. All rights reserved.</p>
+    <p>Developed by Okafor Ifunanya and Ekwem Chidumaga</p>
+  </footer>
+
+  <script src="../app.js"></script>
+</body>
+</html>

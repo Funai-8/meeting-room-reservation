@@ -1,0 +1,26 @@
+[
+  {
+    "model": "reservations.room",
+    "pk": 1,
+    "fields": {
+      "name": "Room A",
+      "capacity": 10
+    }
+  },
+  {
+    "model": "reservations.room",
+    "pk": 2,
+    "fields": {
+      "name": "Room B",
+      "capacity": 20
+    }
+  },
+  {
+    "model": "reservations.room",
+    "pk": 3,
+    "fields": {
+      "name": "Room C",
+      "capacity": 5
+    }
+  }
+]

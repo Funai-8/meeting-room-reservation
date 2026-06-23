@@ -26,11 +26,15 @@ if env_path.exists():
                 key, val = line.split('=', 1)
                 os.environ[key.strip()] = val.strip().strip("'").strip('"')
 
+from django.core.exceptions import ImproperlyConfigured
+
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-7@4l_)iic)oqrm1ziqrj1@sc0(3lxd%e$@wr6&hefb7f7&jxb9')
+SECRET_KEY = os.environ.get('SECRET_KEY')
+if not SECRET_KEY:
+    raise ImproperlyConfigured("The SECRET_KEY environment variable is not set.")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', 'True').lower() == 'true'
+DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
 
 hosts = os.environ.get('ALLOWED_HOSTS', '')
 ALLOWED_HOSTS = [host.strip() for host in hosts.split(',') if host.strip()] if hosts else []

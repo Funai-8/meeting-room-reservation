@@ -15,20 +15,31 @@ You need Python installed. Run the following command from the repository root:
 pip install Django djangorestframework django-cors-headers
 ```
 
-### 2. Run Database Migrations
+### 2. Configure Environment Variables
+Create a `.env` file in the `/backend` directory based on the `/backend/.env.example` template:
+```bash
+cp backend/.env.example backend/.env
+```
+Update the variables in `backend/.env` as needed:
+- `SECRET_KEY`: Django secret key.
+- `DEBUG`: Set to `True` for development, `False` for production.
+- `DATABASE_URL`: Connection string for the database (e.g., `sqlite:///db.sqlite3`).
+- `ALLOWED_HOSTS`: Comma-separated list of allowed hostnames/IPs.
+
+### 3. Run Database Migrations
 Navigate to the `/backend` directory and apply the Django migrations:
 ```bash
 cd backend
 python manage.py migrate
 ```
 
-### 3. Load Seed Room Data
+### 4. Load Seed Room Data
 Load the initial static rooms (Room A, Room B, Room C) into the SQLite database using the provided fixture:
 ```bash
 python manage.py loaddata rooms
 ```
 
-### 4. Run the Dev Server
+### 5. Run the Dev Server
 Start the local Django server:
 ```bash
 python manage.py runserver
@@ -51,4 +62,11 @@ const API_BASE_URL = 'http://127.0.0.1:8000';
 If you deploy or run the backend at a different host/port, update this variable at the top of [app.js](file:///c:/Users/User/meeting-room-reservation/frontend/app.js) to match.
 
 To run the frontend:
-Simply open `frontend/index.html` directly in your browser, or serve it using any simple local HTTP server (like VS Code Live Server or python `http.server`).
+- **Using Python's built-in HTTP server:**
+  ```bash
+  cd frontend
+  python -m http.server 5000
+  ```
+  Then navigate to `http://localhost:5000` in your web browser.
+- **Using Live Server (VS Code Extension):** Right-click [index.html](file:///c:/Users/User/meeting-room-reservation/frontend/index.html) and select "Open with Live Server".
+- **Opening file directly:** Double-click [index.html](file:///c:/Users/User/meeting-room-reservation/frontend/index.html) to open it directly in your web browser.

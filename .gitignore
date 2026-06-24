@@ -25,3 +25,5 @@ db.sqlite3
 Thumbs.db
 .DS_Store
 *.log
+backend_presentation_guide.md
+

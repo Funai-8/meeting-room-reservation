@@ -1,0 +1,32 @@
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+
+# Environment files
+.env
+.env.local
+.env.*
+!.env.example
+
+# Python cache and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+
+# Database
+db.sqlite3
+
+# OS and editor files
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+*.log
+
+# Django static files
+staticfiles/

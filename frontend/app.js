@@ -1,4 +1,12 @@
-const API_BASE_URL = window.API_BASE_URL || (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? 'http://127.0.0.1:8000' : window.location.origin);
+// Replace this with your actual Render backend URL once deployed (e.g., 'https://meeting-room-reservation-backend.onrender.com')
+const RENDER_BACKEND_URL = 'https://meeting-reservation-elnh.onrender.com';
+
+
+const API_BASE_URL = window.API_BASE_URL || (
+  window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
+    ? 'http://127.0.0.1:8000' 
+    : RENDER_BACKEND_URL
+);
 
 let ROOM_CAPACITY = {};
 let ROOM_NAMES = {};

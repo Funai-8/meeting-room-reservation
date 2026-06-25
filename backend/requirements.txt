@@ -6,3 +6,6 @@ gunicorn==26.0.0
 packaging==26.2
 sqlparse==0.5.5
 tzdata==2026.2
+whitenoise==6.8.2
+dj-database-url==2.1.0
+

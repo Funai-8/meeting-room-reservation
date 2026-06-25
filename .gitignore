@@ -1,12 +1,43 @@
-# Virtual environment
+# Virtual environments
 venv/
 ENV/
 env/
 .venv/
 
+# Python packaging and dependencies
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Node/Frontend dependencies
+node_modules/
+jspm_packages/
+web_modules/
+.npm/
+.pnpm-store/
+.yarn/
+yarn-error.log
+
 # Environment files
 .env
 .env.local
+.env.*
+!.env.example
 
 # Python cache and compiled files
 __pycache__/
@@ -27,3 +58,5 @@ Thumbs.db
 *.log
 backend_presentation_guide.md
 
+# Django static files
+staticfiles/
